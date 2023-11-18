@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la mas bonita</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #b3beff; /* Fondo celeste para resaltar el girasol */
+        }
+
+        #center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #sunflower {
+            width: 300px;
+            height: 400px;
+            background: url('girasol.gif') no-repeat center/contain; /* Imagen de girasol */
+            position: absolute;
+            animation: bloom 2s infinite;
+        }
+
+        @keyframes bloom {
+            0%, 100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 1;
+            }
+        }
+
+        #led-text {
+            font-size: 80px; /* Letras más grandes */
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 5px;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #62e7c6; /* Color más claro para las letras (ejemplo: un tono de rosa) */
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Sombra debajo de las letras */
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0.3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="center">
+        <!-- Mostrar un solo girasol grande en el centro de la página -->
+        <div id="sunflower"></div>
+    </div>
+
+    <!-- Mostrar letras "Ashley" en la parte superior -->
+    <div id="led-text">
+        A s h l e y
+    </div>
+
+</body>
+</html>
